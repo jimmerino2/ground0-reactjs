@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const myFirstElement = <h1>Hello React!</h1>
-const mySecondElement = <h2>Hello Again!</h2>
+import header from './header'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
 
 // Class Demonstration Section
 class Car{
@@ -21,4 +20,8 @@ const myCar = new Car("Ford");
 const myArray = ['apple', 'orange', 'banana'];
 const myList = myArray.map((item)=><h1>{item}</h1>);
 
-root.render(myList);
+// JSX Section
+const root = ReactDOM.createRoot(document.getElementById('root'));
+const header2 = ReactDOM.createRoot(document.getElementsByClassName('header')[0]);
+//root.render(myList);
+header2.render(header)
